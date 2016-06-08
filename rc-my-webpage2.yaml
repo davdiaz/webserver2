@@ -1,0 +1,16 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: my-webpage2
+spec:
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        run: my-webpage2
+    spec:
+      containers:
+      - name: my-webpage2
+        image: davdiaz/web_page
+        ports:
+        - containerPort: 8080
